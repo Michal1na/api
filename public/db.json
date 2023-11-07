@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Makaron",
+    "url": "https://www.jadlonomia.com/?s=makaron",
+    "notes": "Najpopularniejszą metodą przygotowywania kurek w polskich kuchniach jest podlanie ich śmietanką. To bardzo uniwersalna baza sosów do kaszy, krokietów, placków ziemniaczanych i wszystkich klusek. A co na to weganie i weganki? Mogą zrobić prostą, niewymyślaną śmietankę słonecznikową!",
+    "category": "main-dishes",
+    "id": 1
+  },
+  {
+    "title": "Ryba",
+    "url": "https://www.jadlonomia.com/przepisy/tofuryba-swiateczna/",
+    "notes": "Najczęściej wyrażanym w tym roku życzeniem była nowa wersja seleryby. Zgłaszaliście, że jest duża potrzeba, aby na stole postawić coś obok ryby – co będzie roślinne, a przypominające tradycyjnego smażonego karpia. Dodatkowo pisaliście, że przydałoby się coś białkowego, co zbilansuje ucztę z pierogów, uszek i kapusty. No i jest, domykająca cykl tegorocznych przepisów z tofu – delikatna tofuryba, o wykwintnym, rybnym aromacie.",
+    "category": "main-dishes",
+    "id": 2
+  },
+  {
+    "title": "Ciasto",
+    "url": "https://www.jadlonomia.com/przepisy/proste-ciasto-z-truskawkami/",
+    "notes": "Zaczęło się polskie lato, czyli krótki czas, kiedy każdy ściga się sam ze sobą na to, ile zje truskawek, czereśni i innych owoców. A żeby mieć szanse w tych zawodach przyda się przepis na proste ciasto z owocami – takie, które robi się w kwadrans, najprostszą techniką i zawsze się udaje.",
+    "category": "sweets",
+    "id": 3
+  },
+  {
+    "title": "Owsianka",
+    "url": "https://www.truetastehunters.com/2014/04/owsianka-na-mleku-sojowym-w.html",
+    "notes": "dla 4 osób",
+    "category": "breakfasts",
+    "id": 4
+  }
+]
