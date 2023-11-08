@@ -9,12 +9,45 @@ const {db} = require('../public/db.json');
 recipeRouter
 
     .get('/get', function(req, res, next) {
-        res.set('Access-Control-Allow-Origin', '*');
-        res.json(JSON.parse('[{    "title": "Makaron",    "url": "https://www.jadlonomia.com/?s=makaron",    "notes": "Najpopularniejszą metodą przygotowywania kurek w polskich kuchniach jest podlanie ich śmietanką. To bardzo uniwersalna baza sosów do kaszy, krokietów, placków ziemniaczanych i wszystkich klusek. A co na to weganie i weganki? Mogą zrobić prostą, niewymyślaną śmietankę słonecznikową!",    "category": "main-dishes",    "id": 1  }]'));
+        (fs.readFile("./public/db.json", "utf8", (error, data) => {
+            if (error) {
+                console.log(error);
+                return; }
+            res.json(JSON.parse(data))}));
     })
-    .get('/logout', function(req, res, next) {
-        res.redirect('/');
-    })
+    .post('/addnew', function(req, res, next) {
+        fs.readFile("./public/db.json", 'utf8', (error, data) => {
+            if (error) {
+                console.log(error)
+            } else {
+                let obj = JSON.parse(data);
+                obj.push(req.body);
+                fs.writeFile("./public/db.json", JSON.stringify(obj), err => {
+                    if (err) {
+                        console.error(err);
+                    }
+                })
+            }
+        })
 
+        res.sendStatus(200)
+    })
+    .delete('/delete/:id', function(req, res, next) {
+        fs.readFile("./public/db.json", 'utf8', (error, data) => {
+            if (error) {
+                console.log(error)
+            } else {
+                let obj = JSON.parse(data);
+                let newobj = obj.filter((item) => item.id !== req.params.id);
+
+                fs.writeFile("./public/db.json", JSON.stringify(newobj), err => {
+                    if (err) {
+                        console.error(err);
+                    }
+                })
+            }
+        })
+        res.sendStatus(200)
+    })
 module.exports = recipeRouter
 
