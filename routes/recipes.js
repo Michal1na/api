@@ -2,7 +2,7 @@
 const express = require('express');
 const recipeRouter = express.Router();
 const fs = require('fs');
-const {db} = require('../public/db.json');
+
 
 
 /* GET recipes listing. */
