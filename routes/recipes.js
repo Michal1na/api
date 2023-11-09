@@ -1,4 +1,5 @@
 
+const { log } = require('console');
 const express = require('express');
 const recipeRouter = express.Router();
 const fs = require('fs');
@@ -20,8 +21,21 @@ recipeRouter
             if (error) {
                 console.log(error)
             } else {
+                
+                
                 let obj = JSON.parse(data);
-                obj.push(req.body);
+                let lastitem= obj[obj.length-1]                
+                newId = lastitem.id +1 
+                console.log(newId)
+                let newReqBody = {
+                    
+                    ...req.body,
+                    id: newId
+                }
+                obj.push(newReqBody);
+                
+
+            
                 fs.writeFile("./public/db.json", JSON.stringify(obj), err => {
                     if (err) {
                         console.error(err);
