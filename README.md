@@ -11,7 +11,7 @@ Front-end repository -> https://github.com/Michal1na/FrontendReact.git
 <br>
 Test login:
 <br>
-email: test@test.cpm
+email: test@test.com
 <br>
 password: test123
 
