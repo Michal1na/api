@@ -7,7 +7,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "nodem ./app.js"
+    "start": "node ./app.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
