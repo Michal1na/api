@@ -1,9 +1,13 @@
 {
   "name": "api",
   "version": "0.0.0",
+  "engines": {
+  "npm": "10.1.0",
+  "node": "v20.9.0"
+  },
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodem ./app.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
