@@ -43,6 +43,12 @@ app.use(function(err, req, res, next) {
 
 });
 
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/My_cook_book", {
+});
+
+
+
 app.listen(3001, 'localhost', () => {
   console.log('Listening on http://localhost:3001');
 })
